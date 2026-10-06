@@ -1,130 +1,259 @@
-🎬 Netflix Content Analytics Dashboard
 
-Interactive Power BI dashboard for exploring Netflix's movies and
-TV-show catalog, content mix, release trends, ratings, directors, and
-geographic distribution.
+ *Netflix Content Analytics Dashboard — Power BI*
 
 
 
+Power BI
 
-
-
-📌 Project Overview
-
-This project transforms Netflix catalog data into an interactive
-business intelligence dashboard using Microsoft Power BI.
-
-The dashboard is designed to answer practical analytical questions such
-as:
-
-How large is the Netflix catalog?
-
-What is the split between Movies and TV Shows?
-
-How has Netflix content changed across release years?
-
-Which ratings are most common?
-
-How is content distributed across countries?
-
-How does the catalog change when users filter by content type,
-year, or country?
-
-What patterns can be identified from the available director and
-content information?
-
-The goal is not just to display charts, but to create a dashboard that
-allows a user to explore the catalog interactively and quickly
-identify meaningful patterns.
-
-🎯 Business Objective
-
-The dashboard provides a compact analytical view of Netflix's content
-library for stakeholders who want to understand:
-
-Content Mix → Growth/Release Trends → Audience Ratings → Geographic
-Distribution → Catalog Exploration
-
-It can be used as a portfolio project to demonstrate practical skills
-in:
-
-Data cleaning
-
-Data transformation
-
-Data modeling
+Power Query / M
 
 DAX
 
-KPI design
+KPI measures,
+Data Cleaning
 
-Data visualization
 
-Interactive dashboard development
+Data Modeling
 
-Business-oriented storytelling
 
-🛠️ Tech Stack
+KPI Development
 
-Tool                      Purpose
+Building headline metrics for fast business understanding
 
-Microsoft Power BI    Dashboard development and visualization
-Power Query / M       Data cleaning and transformation
-DAX                   Measures and KPI calculations
-Data Modeling         Organizing analytical fields and measures
-Interactive Slicers   Dynamic filtering
-Map Visualization     Geographic content analysis
+Interactive Reporting
 
-🔄 Data Analytics Workflow
+Slicers and cross-filtering across visuals
 
-Raw Netflix Dataset
-        ↓
-Data Import
-        ↓
-Power Query / M
-        ↓
-Data Cleaning & Transformation
-        ↓
-Data Type & Missing-Value Handling
-        ↓
-Calculated / Cleaned Fields
-        ↓
-DAX Measures
-        ↓
-Interactive Visualizations
-        ↓
-Dashboard
-        ↓
-Business Insights
+Data Visualization
 
-1. Data Preparation
+Donut, area, column and filled-map visual design
 
-The dataset was prepared in Power Query before visualization.
+Geospatial Analysis
 
-Typical preparation activities included:
+Country-level content distribution
 
-Correcting data types
+Business Storytelling
 
-Handling missing values
+Converting a raw content dataset into an easy-to-read analytical story
 
-Cleaning categorical fields
+Dashboard UI/UX
 
-Preparing country information
+Dark theme, visual hierarchy, KPI-first layout and consistent formatting
 
-Preparing director-related fields
+Analytical Thinking
 
-Standardizing fields used by slicers
+Translating dataset fields into business questions and insights
 
-Creating analysis-ready columns
+ *Project Objective*
 
-This ensures that the dashboard is based on a cleaner and more
-consistent analytical layer.
+The goal of this project is to turn a raw Netflix titles dataset into an interactive analytical dashboard that helps users quickly understand the structure and evolution of the Netflix catalog.
 
-📊 Dashboard Components
+The dashboard answers questions such as:
 
-🔢 KPI Cards
+What is the balance between Movies and TV Shows?
 
-The dashboard includes high-level KPI indicators for:
+How does Netflix content vary across release years?
+
+Which ratings occur most frequently?
+
+How is content distributed across countries?
+
+How much director information is available across content types?
+
+How do the metrics change when the user filters by Show Type, Release Year, or Country?
+
+This project focuses on both technical Power BI skills and business-oriented data storytelling.
+
+📌 Dashboard Snapshot
+
+The current dashboard view displays:
+
+KPI
+
+Dashboard value
+
+🎞️ Total Shows
+
+8,086
+<img width="941" height="446" alt="{BF2CCFA8-3756-4C46-8B4B-87D4ACD32A78}" src="https://github.com/user-attachments/assets/399354f5-21a6-41f8-a4e3-927135f4dd5e" />
+<img width="941" height="446" alt="{BF2CCFA8-3756-4C46-8B4B-87D4ACD32A78}" src="https://github.com/user-attachments/assets/ce83ba67-6d7d-4310-a188-0d8fde56aa20" />
+
+
+🎬 Movies
+
+5,486
+
+📺 TV Shows
+
+2,600
+
+🎥 Director-linked records
+
+4,198
+
+Note: These KPI values represent the current dashboard/model view in the PBIX file. The director metric is based on the dashboard's director field logic, not a verified count of unique people.
+
+Content Mix
+
+Movies: 67.85%
+
+TV Shows: 32.15%
+
+The dashboard therefore shows a clearly movie-heavy catalog in its current view.
+
+🔄 End-to-End Analytics Workflow
+
+Netflix Titles Dataset
+        │
+        ▼
+   Data Import
+        │
+        ▼
+ Power Query / M
+        │
+        ├── Cleaning
+        ├── Data-type preparation
+        ├── Blank / categorical handling
+        ├── Country preparation
+        └── Director preparation
+        │
+        ▼
+  Cleaned Dataset
+        │
+        ▼
+    DAX Measures
+        │
+        ├── Total Shows
+        ├── Movies
+        ├── TV Shows
+        └── Director metric
+        │
+        ▼
+ Interactive Visual Layer
+        │
+        ├── KPI Cards
+        ├── Donut Charts
+        ├── Area Chart
+        ├── Rating Column Chart
+        ├── Filled Map
+        └── Slicers
+        │
+        ▼
+ Business Insights
+
+📂 Dataset Understanding
+
+The repository contains the Netflix titles dataset with fields including:
+
+Field
+
+Purpose
+
+show_id
+
+Unique title identifier
+
+type
+
+Movie or TV Show
+
+title
+
+Content title
+
+director
+
+Director information
+
+cast
+
+Cast information
+
+country
+
+Country/countries associated with the title
+
+date_added
+
+Date the title was added
+
+release_year
+
+Original release year
+
+rating
+
+Content rating
+
+duration
+
+Movie runtime or number of TV seasons
+
+listed_in
+
+Genre/category information
+
+description
+
+Title description
+
+The PBIX model also uses prepared fields such as Country_new and Director_new for reporting.
+
+🧹 Data Preparation & Power Query / M Understanding
+
+Power Query acts as the data-preparation layer between the raw CSV and the analytical report.
+
+Why Power Query?
+
+Raw data is rarely ready for direct reporting. Before visualization, the data needs to be made consistent, usable and analysis-friendly.
+
+Main preparation responsibilities in this project
+
+Validate and prepare column data types
+
+Handle blank or incomplete categorical values
+
+Prepare country information for geographic analysis
+
+Prepare director information for analysis
+
+Create cleaned fields used by report visuals
+
+Keep the final reporting layer easier to analyze
+
+Important fields created/used by the report
+
+Country
+   ↓
+Country_new
+   ↓
+Filled Map
+
+Director
+   ↓
+Director_new
+   ↓
+Director Analysis
+
+Power Query mental model
+
+Raw Data
+   ↓
+Transform
+   ↓
+Clean
+   ↓
+Shape
+   ↓
+Load
+
+Power Query is therefore responsible for preparing the data, while Power BI's visual and DAX layers are responsible for analysis and presentation.
+
+🧮 DAX & Measurement Layer
+
+DAX provides the calculation layer used to turn the dataset into report-level KPIs and analytical metrics.
+
+Measures visible in the PBIX report
 
 Total Shows
 
@@ -132,332 +261,554 @@ Movies
 
 TV Shows
 
-Total Directors
+Total director
 
-These KPIs provide an immediate snapshot of the catalog.
+Several chart visuals also use a non-blank count of show_id as the title-count aggregation.
 
-🍿 Content Type Analysis
+DAX concepts demonstrated
 
-A donut chart compares:
+Measure
+   ↓
+Filter Context
+   ↓
+Aggregation / Conditional Logic
+   ↓
+KPI or Visual
+
+Why measures instead of hard-coded numbers?
+
+Because measures respond to the current filter context.
+
+For example:
+
+Select "Movie"
+      ↓
+Movies KPI updates
+      ↓
+Donut updates
+      ↓
+Release trend updates
+      ↓
+Ratings update
+      ↓
+Country analysis updates
+
+This is what makes the report dynamic rather than static.
+
+📊 Dashboard Visualizations
+
+1. 🎯 KPI Cards — Executive Overview
+
+The top section provides immediate headline metrics:
+
+Total Shows
 
 Movies
 
 TV Shows
 
-This helps identify the overall composition of the Netflix catalog.
+Director-linked records
 
-📈 Release-Year Trend
+Why this visual?
 
-An area chart tracks the number of titles by release year.
+KPI cards answer the first question a stakeholder usually has:
 
-This makes it easier to identify:
+"What is the current size and composition of the catalog?"
 
-Periods of higher content production
+They create a strong executive-summary layer before the user explores detailed charts.
 
-Changes in catalog composition over time
+2. 🍿 Movie vs TV Show — Donut Chart
 
-Long-term release patterns
+Category: type
+Metric: title count
 
-⭐ Rating Analysis
+What it shows
 
-A column chart analyzes the distribution of titles across content
-ratings.
+The visualization compares:
 
-This helps explore the audience positioning of the catalog and identify
-the most frequently represented rating categories.
+Movies
 
-🌍 Geographic Analysis
+TV Shows
 
-A filled map visualizes Netflix content by country.
+Current dashboard understanding
 
-This enables geographic exploration of the catalog and helps identify
-countries/regions with stronger representation.
+Movies     █████████████████  67.85%
+TV Shows   ████████           32.15%
 
-🎬 Director Analysis
+This immediately communicates that Movies form the larger share of the displayed catalog.
 
-The dashboard includes director-related analysis to provide an
-additional perspective on the catalog's creative contributors.
+Analytical purpose
 
-🎛️ Interactive Filters
+Useful for understanding:
 
-Users can dynamically filter the dashboard using:
+Content mix
 
-Show Type
+Format preference
 
-Release Year
+How the catalog composition changes under filters
 
-Country
+3. 📈 Release-Year Trend — Area Chart
 
-The visuals respond to these selections, allowing users to move from a
-high-level overview to a more focused analysis.
+X-axis: release_year
+Y-axis: title count
 
-💡 Key Analytical Questions
+What it shows
 
-The dashboard is built around questions rather than simply displaying
-visuals:
+The area chart tracks how many titles belong to each release year.
 
-Content
+Key visual pattern
 
-Is the catalog more heavily represented by Movies or TV Shows?
+The dashboard shows a relatively low level in older years followed by a strong increase through the 2010s, with the highest concentration appearing in the late-2010s portion of the chart.
 
-How does the content mix change under different filters?
+Business question
 
-Time
+"How has the composition of the Netflix catalog changed over time?"
 
-Which release periods contain the highest concentration of titles?
+Why an area chart?
 
-How does the catalog evolve across years?
+Because the objective is to communicate trend + volume over time rather than compare isolated categories.
 
-Ratings
+4. ⭐ Rating Distribution — Column Chart
+
+X-axis: rating
+Y-axis: title count
+
+What it shows
+
+The column chart compares title volume across content-rating categories.
+
+Current dashboard understanding
+
+The chart visually indicates that TV-MA is the largest rating category, followed by TV-14, with other ratings contributing smaller volumes.
+
+Business questions
 
 Which ratings dominate the catalog?
 
-Does the rating mix change by content type or country?
+How does the rating distribution change by content type?
 
-Geography
+How does the mix change for a selected country or year?
 
-Which countries contribute the most titles?
+5. 🌍 Country Distribution — Filled Map
 
-How does geographic representation change when filtering the
-dashboard?
+Geographic field: Country_new
 
-Exploration
+What it shows
 
-What changes when a specific year, country, or content type is
-selected?
+The filled map provides a geographic view of where Netflix titles are represented across countries.
 
-🔍 Interactive Analysis
+Why a map?
 
-One of the main strengths of the dashboard is cross-filtering.
+A geographic visual makes spatial patterns much easier to understand than a long country list.
 
-For example:
+Business questions
 
-Select Country
+Which markets have the strongest content representation?
+
+How does country distribution change when filtering the report?
+
+6. 🎥 Director Analysis — Donut / Metric Layer
+
+The PBIX includes a director-focused visual using the cleaned Director_new field.
+
+This layer helps compare the availability of director information across content types.
+
+Important interpretation
+
+The displayed metric is a count of non-blank director-linked records, so it should not automatically be described as the number of unique directors.
+
+That distinction is important in an interview because:
+
+Count of director records ≠ Count of unique directors
+
+7. 🎛️ Interactive Slicers
+
+The dashboard contains three primary slicers:
+
+Show Type
+
+All
+Movie
+TV Show
+
+Release Year
+
+Allows the user to focus the dashboard on a selected year.
+
+Country
+
+Allows the user to focus the report on a selected country.
+
+Why slicers matter
+
+They turn the dashboard into an exploration tool.
+
+Instead of creating a separate report for every business question, the same visuals can be reused dynamically.
+
+🔍 Understanding the Interactivity
+
+The strongest analytical feature of this report is the interaction between the filters and visuals.
+
+Example: Country Analysis
+
+User selects a country
+        ↓
+Filter context changes
+        ↓
+KPI values recalculate
+        ↓
+Movie / TV mix changes
+        ↓
+Release-year trend changes
+        ↓
+Rating distribution changes
+        ↓
+Other visuals reflect the filtered context
+
+Example: Movie Analysis
+
+Select "Movie"
       ↓
-KPIs update
+Only movie records remain in context
       ↓
-Movie/TV split updates
+KPI values update
       ↓
 Release trend updates
       ↓
-Rating distribution updates
+Ratings update
       ↓
-Other visuals reflect the selection
+Country distribution updates
 
-This turns the report from a static collection of charts into an
-interactive analytical tool.
+This is the difference between a dashboard and a collection of independent charts.
 
-📐 DAX & KPI Layer
+🧠 Why Each Visualization Was Chosen
 
-The project uses Power BI measures for KPI calculations and aggregation.
+Visualization
 
-Example conceptual measures:
+Analytical purpose
 
-Total Shows =
-COUNTROWS(cleaned_netflix_data)
+KPI Card
 
-Movies =
-CALCULATE(
-    [Total Shows],
-    cleaned_netflix_data[type] = "Movie"
-)
+Fast executive summary
 
-TV Shows =
-CALCULATE(
-    [Total Shows],
-    cleaned_netflix_data[type] = "TV Show"
-)
+Donut Chart
 
-Measure names and formulas can be adapted to the final model depending
-on the version of the PBIX file.
+Show composition / share
 
-🎨 Dashboard Design
+Area Chart
 
-The dashboard follows a dark, entertainment-style visual theme inspired
-by Netflix branding.
+Time-based trend and volume
 
-Design principles used
+Column Chart
 
-Dark background for visual contrast
+Category comparison
 
-Strong accent colors
+Filled Map
 
-KPI-first layout
+Geographic distribution
 
-Consistent visual hierarchy
+Slicer
 
-Interactive slicers
+User-driven filtering
+
+The visual choices are based on the question being answered, not simply on visual variety.
+
+💡 Key Insights From the Current Dashboard
+
+1. Movies dominate the catalog
+
+The current dashboard shows 5,486 Movies vs 2,600 TV Shows, giving Movies a 67.85% share.
+
+2. Content volume is concentrated in newer release years
+
+The release-year visualization shows a major increase during the 2010s compared with older release years.
+
+3. TV-MA is the leading rating category
+
+The rating chart makes TV-MA the most prominent rating in the displayed report.
+
+4. Netflix content is geographically broad
+
+The map demonstrates that the catalog is not concentrated in a single market; titles are represented across multiple regions.
+
+5. Interactivity changes the story
+
+A global summary can look very different after selecting a country, year, or content type. This makes filter-context analysis a major part of the dashboard.
+
+These observations describe the current dashboard view and should not be interpreted as causal business conclusions about Netflix's real-world strategy.
+
+🎨 Dashboard Design & UX
+
+The report uses a dark entertainment-style theme with:
+
+Strong red visual accents
+
+Bright yellow analytical labels
+
+High-contrast cards
 
 Rounded visual containers
 
-Geographic visualization
+KPI-first hierarchy
 
-Minimal unnecessary decoration
+Compact filter controls
 
-The objective is to make the dashboard visually attractive while
-keeping the analysis readable.
+Clear separation between summary and detailed analysis
 
-📷 Dashboard Preview
+Design philosophy
 
-Add your final dashboard screenshot here:
+Top
+│
+├── Filters
+├── KPIs
+│
+├── Main Trend / Composition Analysis
+│
+└── Rating + Geography
+Bottom
 
-![Netflix Power BI Dashboard](images/netflix-dashboard.png)
+The result is a dashboard designed for fast scanning first, deeper exploration second.
 
-Recommended GitHub structure
+📐 Power BI Report Structure
+
+The current PBIX is a single-page 1280 × 720 report containing the main dashboard experience.
+
+The report definition includes:
+
+KPI cards
+
+Movie/TV donut analysis
+
+Director-focused analysis
+
+Release-year area chart
+
+Rating column chart
+
+Country filled map
+
+Show Type slicer
+
+Release Year slicer
+
+Country slicer
+
+Netflix branding image
+
+📁 Repository Structure
 
 Netflix-PowerBI-Dashboard/
 │
 ├── README.md
-├── Netflix_Dashboard.pbix
-│
-├── dataset/
-│   └── netflix_titles.csv
-│
-├── images/
-│   └── netflix-dashboard.png
-│
-└── documentation/
-    └── project-notes.md
+├── dashboard of netflix.pbix
+├── netflix.jpg
+└── netflix_titles.csv
 
-If the original dataset has redistribution restrictions, include a
-link/instructions for obtaining it rather than committing the raw
-dataset.
+File purpose
 
-📈 Portfolio Value
+File
 
-This project demonstrates more than basic chart creation.
+Purpose
 
-Skills demonstrated
+dashboard of netflix.pbix
 
-Power BI - Dashboard development - Interactive reporting - Visual
-design - Slicers - Cross-filtering - KPI cards - Maps - Trend analysis
+Power BI report
 
-Power Query - Data transformation - Data cleaning - Column
-preparation - Handling analytical fields
+netflix_titles.csv
 
-DAX - Measures - Conditional calculations - KPI logic -
-Filter-context-based analysis
+Source dataset
 
-Analytics - Trend analysis - Categorical analysis - Geographic
-analysis - Business storytelling - Interactive exploration
+netflix.jpg
 
-🚀 How to Use the Project
+Dashboard preview
 
-1. Download the repository
+README.md
 
-git clone (https://github.com/sonamgupta21062003-cmyk/Netflix-PowerBI-Dashboard.git)
+Project documentation
 
-2. Open the PBIX file
+▶️ How to Run the Project
+
+1. Clone the repository
+
+git clone https://github.com/sonamgupta21062003-cmyk/Netflix-PowerBI-Dashboard.git
+
+2. Open Power BI Desktop
 
 Open:
 
-Netflix_Dashboard.pbix
+dashboard of netflix.pbix
 
-using Microsoft Power BI Desktop.
+3. Check the data source
 
-3. Explore the dashboard
+The repository contains:
 
-Try different combinations of:
+netflix_titles.csv
 
-Show Type
+If Power BI asks for a different file location, update the source path in Power Query.
 
-Release Year
+4. Refresh
 
-Country
+Use:
+
+Home → Refresh
+
+5. Explore the dashboard
+
+Try combinations of:
+
+Show Type + Release Year + Country
 
 and observe how the KPIs and visuals change.
 
-🧠 Interview Explanation
+🗣️ Interview-Ready Project Explanation
 
-30-second project explanation
+30-second answer
 
-"I built an interactive Netflix Content Analytics dashboard in Power
-BI. I first prepared and transformed the Netflix catalog using Power
-Query, created DAX measures for key KPIs such as total shows, movies,
-and TV shows, and then built interactive visuals for content type,
-release-year trends, ratings, directors, and country-level
-distribution. I also added slicers for show type, release year, and
-country so users can dynamically explore the catalog. The main focus
-was not just visualization, but converting the dataset into an
-interactive analytical story."
+"I built an interactive Netflix Content Analytics dashboard using Power BI. I started by preparing the Netflix titles dataset in Power Query, including cleaning and creating analysis-ready country and director fields. Then I used DAX-based measures for KPIs such as total shows, movies, TV shows and director-linked records. I designed a one-page interactive dashboard with KPI cards, donut charts, a release-year area chart, a rating column chart, a filled country map and slicers for show type, release year and country. The main objective was to turn raw catalog data into an interactive analytical story rather than just presenting static charts."
 
-If the interviewer asks: "Why Power BI?"
+🧑‍💼 Common Interview Questions
 
-"Power BI allows me to combine data transformation, DAX-based
-calculations, interactive filtering, and visualization in a single
-analytical workflow. It also makes it easy for business users to
-explore the data without writing queries themselves."
+Why did you use Power Query?
 
-If asked: "What did you do in Power Query?"
+Answer:
+"Power Query is the data-preparation layer. I used it to clean and structure the raw dataset and create fields that were more suitable for reporting and visualization."
 
-"I used Power Query as the data-preparation layer to clean and
-structure the dataset before analysis. This included handling data
-types, cleaning categorical fields, preparing country and director
-fields, and creating analysis-ready columns."
+Why did you use DAX?
 
-If asked: "What makes your dashboard interactive?"
+Answer:
+"DAX allowed me to create reusable measures that respond to filter context, so KPIs and visual totals update automatically when users interact with the dashboard."
 
-"The dashboard uses slicers for show type, release year, and
-country. Selecting a value changes the connected KPIs and visuals
-through Power BI's filtering and cross-filtering behavior."
+Why use a donut chart for Movie vs TV Show?
 
-🔮 Future Improvements
+Answer:
+"Because the question is about composition. A donut chart makes the relative share of Movies and TV Shows easy to understand at a glance."
 
-Possible next versions could include:
+Why use an area chart for release year?
 
-📌 Genre-level analysis
+Answer:
+"The variable is temporal, so an area chart communicates the overall trend and volume across years more naturally than a categorical chart."
 
-📌 Average content duration
+Why use a filled map?
 
-📌 Year-over-year growth
+Answer:
+"Country is a geographic field, so a map is an intuitive way to identify spatial patterns in content distribution."
 
-📌 Top countries by content volume
+What is the difference between a report and a dashboard?
 
-📌 Top directors by number of titles
+Answer:
+"A Power BI report is a richer analytical experience that can contain multiple pages and extensive interaction. A dashboard is a single-page monitoring view and can bring tiles from different reports."
 
-📌 Movie vs TV Show trend comparison
+What happens when I select a slicer?
 
-📌 Drill-through pages
+Answer:
+"The selection changes the filter context. Connected visuals recalculate their measures and update to reflect the selected subset."
 
-📌 Tooltip pages
+What is the difference between a count of directors and unique directors?
 
-📌 Bookmark-based navigation
+Answer:
+"A count of non-blank director records counts populated records. A distinct count counts unique director names. They can produce different results, especially when one person appears on multiple titles."
 
-📌 Executive summary page
+📌 Resume-Ready Project Description
 
-📌 Advanced DAX time-intelligence measures
+Netflix Content Analytics Dashboard | Power BI
 
-📌 Power BI Service deployment
+Built an interactive Power BI dashboard to analyze 8,086 titles, including 5,486 Movies and 2,600 TV Shows in the dashboard's current model view.
 
-⭐ Project Highlights
+Used Power Query / M for data preparation and analysis-ready fields, including country and director transformations.
 
-✓ Power Query data transformation
-✓ DAX-based KPI layer
-✓ Interactive slicers
-✓ Cross-filtering
-✓ Time-series analysis
-✓ Rating analysis
-✓ Geographic analysis
-✓ Content-type analysis
-✓ Professional dashboard design
-✓ Business-focused storytelling
+Developed DAX-based KPIs and filter-aware reporting for content mix and catalog analysis.
+
+Designed interactive donut, area, column and filled-map visualizations with slicers for Show Type, Release Year and Country.
+
+Applied data storytelling and dashboard UX principles to convert raw catalog data into an executive-friendly analytical view.
+
+🚀 Future Enhancements
+
+The current dashboard can be extended with:
+
+Genre-level analysis using listed_in
+
+Top countries by title count
+
+Top directors using DISTINCTCOUNT
+
+Movie duration analysis
+
+TV-show season analysis
+
+Titles added over time using date_added
+
+KPI percentage measures
+
+Drill-through pages
+
+Report tooltips
+
+Bookmarks and navigation
+
+Dedicated executive summary page
+
+Advanced time-intelligence measures
+
+Power BI Service publishing
+
+⚠️ Analytical Limitations
+
+This project is a catalog analytics project, not a complete Netflix business-performance model.
+
+The available dataset does not directly provide:
+
+Streaming hours
+
+Revenue
+
+Subscriber-level behavior
+
+Watch time
+
+Retention
+
+Customer satisfaction
+
+Content ROI
+
+Therefore, the dashboard should be used to understand catalog structure and descriptive patterns, rather than to make unsupported claims about profitability or customer behavior.
+
+⭐ What This Project Shows
+
+RAW DATA
+   ↓
+POWER QUERY / M
+   ↓
+CLEAN & SHAPE
+   ↓
+DAX MEASURES
+   ↓
+DATA MODEL
+   ↓
+INTERACTIVE VISUALS
+   ↓
+FILTER CONTEXT
+   ↓
+BUSINESS INSIGHTS
+
+This project demonstrates an end-to-end Power BI analytics workflow rather than only chart creation.
+
+🔗 Repository
+
+GitHub:
+https://github.com/sonamgupta21062003-cmyk/Netflix-PowerBI-Dashboard
+
+LinkedIn:
+https://www.linkedin.com/in/sonam-gupta-a5a9b640/
 
 👩‍💻 Author
 
 Sonam Gupta
 
-Student of Computer Science | Data Analytics | Power BI | Python | SQL |
-Machine Learning
+B.Sc. Computer Science
+Aspiring Data Analyst | Power BI | SQL | Python | Machine Learning
 
-Connect with me
-
-LinkedIn: https://www.linkedin.com/in/sonam-gupta-a5a9b640/
-
-GitHub: https://github.com/sonamgupta21062003-cmyk
-
-📜 License
-
-This project is intended for educational and portfolio purposes.
-
-Dataset ownership and licensing remain with the original data
-provider/source.
+<p align="center">
+  <b>📊 Transforming raw data into clear, interactive business insights.</b>
+</p>
