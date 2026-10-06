@@ -1,16 +1,7 @@
 
- *Netflix Content Analytics Dashboard — Power BI*
+ ***Netflix Content Analytics Dashboard — Power BI***
 
 
-
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)![Power Query / M](https://img.shields.io/badge/Power%20Query%20%2F%20M-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white)![DAX](https://img.shields.io/badge/DAX-5C2D91?style=for-the-badge&logo=microsoft&logoColor=white)![KPI Measures](https://img.shields.io/badge/KPI%20Measures-E50914?style=for-the-badge)![Data Cleaning](https://img.shields.io/badge/Data%20Cleaning-2E7D32?style=for-the-badge)![Data Modeling](https://img.shields.io/badge/Data%20Modeling-6A1B9A?style=for-the-badge)![KPI Development](https://img.shields.io/badge/KPI%20Development-FF6F00?style=for-the-badge)
-<p align="center">
-  <img src="netflix.jpg" alt="Netflix Power BI Dashboard Preview" width="100%">
-</p>
-
-<p align="center">
-  <b>Interactive Business Intelligence dashboard built with Power BI to analyze Netflix content across type, time, ratings, countries, and director coverage.</b>
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
@@ -19,33 +10,15 @@
   <img src="https://img.shields.io/badge/BI-Data%20Storytelling-E50914?style=for-the-badge">
 </p>
 
-Building headline metrics for fast business understanding
+<p align="center">
+  <img src="netflix.jpg" alt="Netflix Power BI Dashboard Preview" width="100%">
+</p>
 
-Interactive Reporting
+<p align="center">
+  <b>Interactive Business Intelligence dashboard built with Power BI to analyze Netflix content across type, time, ratings, countries, and director coverage.</b>
+</p>
 
-Slicers and cross-filtering across visuals
-
-Data Visualization
-
-Donut, area, column and filled-map visual design
-
-Geospatial Analysis
-
-Country-level content distribution
-
-Business Storytelling
-
-Converting a raw content dataset into an easy-to-read analytical story
-
-Dashboard UI/UX
-
-Dark theme, visual hierarchy, KPI-first layout and consistent formatting
-
-Analytical Thinking
-
-Translating dataset fields into business questions and insights
-
- *Project Objective*
+ **Project Objective**
 
 The goal of this project is to turn a raw Netflix titles dataset into an interactive analytical dashboard that helps users quickly understand the structure and evolution of the Netflix catalog.
 
@@ -65,7 +38,7 @@ How do the metrics change when the user filters by Show Type, Release Year, or C
 
 This project focuses on both technical Power BI skills and business-oriented data storytelling.
 
-📌 Dashboard Snapshot
+**Dashboard Snapshot**
 
 The current dashboard view displays:
 
@@ -90,7 +63,7 @@ TV Shows: 32.15%
 
 The dashboard therefore shows a clearly movie-heavy catalog in its current view.
 
-🔄 End-to-End Analytics Workflow
+***End-to-End Analytics Workflow***
 
 Netflix Titles Dataset
         │
@@ -130,7 +103,7 @@ Netflix Titles Dataset
         ▼
  Business Insights
 
-📂 Dataset Understanding
+ ***Dataset Understanding***
 
 The repository contains the Netflix titles dataset with fields including:
 
@@ -162,7 +135,7 @@ description                           Title description
 
 The PBIX model also uses prepared fields such as Country_new and Director_new for reporting.
 
-**Data Preparation & Power Query / M Understanding**
+***Data Preparation & Power Query / M Understanding***
 
 Power Query acts as the data-preparation layer between the raw CSV and the analytical report.
 
