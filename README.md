@@ -3,20 +3,21 @@
 
 
 
-Power BI
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)![Power Query / M](https://img.shields.io/badge/Power%20Query%20%2F%20M-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white)![DAX](https://img.shields.io/badge/DAX-5C2D91?style=for-the-badge&logo=microsoft&logoColor=white)![KPI Measures](https://img.shields.io/badge/KPI%20Measures-E50914?style=for-the-badge)![Data Cleaning](https://img.shields.io/badge/Data%20Cleaning-2E7D32?style=for-the-badge)![Data Modeling](https://img.shields.io/badge/Data%20Modeling-6A1B9A?style=for-the-badge)![KPI Development](https://img.shields.io/badge/KPI%20Development-FF6F00?style=for-the-badge)
+<p align="center">
+  <img src="netflix.jpg" alt="Netflix Power BI Dashboard Preview" width="100%">
+</p>
 
-Power Query / M
+<p align="center">
+  <b>Interactive Business Intelligence dashboard built with Power BI to analyze Netflix content across type, time, ratings, countries, and director coverage.</b>
+</p>
 
-DAX
-
-KPI measures,
-Data Cleaning
-
-
-Data Modeling
-
-
-KPI Development
+<p align="center">
+  <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
+  <img src="https://img.shields.io/badge/Power%20Query-M%20Language-00A4EF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/DAX-Analytics-5C2D91?style=for-the-badge">
+  <img src="https://img.shields.io/badge/BI-Data%20Storytelling-E50914?style=for-the-badge">
+</p>
 
 Building headline metrics for fast business understanding
 
@@ -72,27 +73,15 @@ KPI
 
 Dashboard value
 
-🎞️ Total Shows
+🎞️ Total Shows            8,086
 
-8,086
-<img width="941" height="446" alt="{BF2CCFA8-3756-4C46-8B4B-87D4ACD32A78}" src="https://github.com/user-attachments/assets/399354f5-21a6-41f8-a4e3-927135f4dd5e" />
-<img width="941" height="446" alt="{BF2CCFA8-3756-4C46-8B4B-87D4ACD32A78}" src="https://github.com/user-attachments/assets/ce83ba67-6d7d-4310-a188-0d8fde56aa20" />
+🎬 Movies                 5,486
 
+📺 TV Shows               2,600
 
-🎬 Movies
-
-5,486
-
-📺 TV Shows
-
-2,600
-
-🎥 Director-linked records
+ Director-linked records
 
 4,198
-
-Note: These KPI values represent the current dashboard/model view in the PBIX file. The director metric is based on the dashboard's director field logic, not a verified count of unique people.
-
 Content Mix
 
 Movies: 67.85%
@@ -145,61 +134,35 @@ Netflix Titles Dataset
 
 The repository contains the Netflix titles dataset with fields including:
 
-Field
+Field                                   Purpose
 
-Purpose
+show_id                                Unique title identifier
 
-show_id
+type                                   Movie or TV Show
 
-Unique title identifier
+title                                  Content title
 
-type
+director                               Director information
 
-Movie or TV Show
+cast                                   Cast information
 
-title
+country                                Country/countries associated with the title
 
-Content title
+date_added                             Date the title was added
 
-director
+release_year                           Original release year
 
-Director information
+rating                                 Content rating
 
-cast
+duration                              Movie runtime or number of TV seasons
 
-Cast information
+listed_in                             Genre/category information
 
-country
-
-Country/countries associated with the title
-
-date_added
-
-Date the title was added
-
-release_year
-
-Original release year
-
-rating
-
-Content rating
-
-duration
-
-Movie runtime or number of TV seasons
-
-listed_in
-
-Genre/category information
-
-description
-
-Title description
+description                           Title description
 
 The PBIX model also uses prepared fields such as Country_new and Director_new for reporting.
 
-🧹 Data Preparation & Power Query / M Understanding
+**Data Preparation & Power Query / M Understanding**
 
 Power Query acts as the data-preparation layer between the raw CSV and the analytical report.
 
@@ -249,7 +212,7 @@ Load
 
 Power Query is therefore responsible for preparing the data, while Power BI's visual and DAX layers are responsible for analysis and presentation.
 
-🧮 DAX & Measurement Layer
+**DAX & Measurement Layer**
 
 DAX provides the calculation layer used to turn the dataset into report-level KPIs and analytical metrics.
 
@@ -295,11 +258,13 @@ Country analysis updates
 
 This is what makes the report dynamic rather than static.
 
-📊 Dashboard Visualizations
+***Dashboard Visualizations***
 
-1. 🎯 KPI Cards — Executive Overview
+**KPI Cards — Executive Overview**
 
 The top section provides immediate headline metrics:
+<img width="612" height="130" alt="{B9848B17-17C5-473E-866F-35DDFC1B4D67}" src="https://github.com/user-attachments/assets/70bcc192-405e-4f48-8230-f5955029a521" />
+
 
 Total Shows
 
@@ -317,8 +282,8 @@ KPI cards answer the first question a stakeholder usually has:
 
 They create a strong executive-summary layer before the user explores detailed charts.
 
-2. 🍿 Movie vs TV Show — Donut Chart
-
+**Movie vs TV Show — Donut Chart**
+<img width="340" height="279" alt="{D707A896-6F50-4415-8F92-2CDD43DD89B5}" src="https://github.com/user-attachments/assets/9acd76c6-0953-42a3-9180-709942cf477e" />
 Category: type
 Metric: title count
 
@@ -347,7 +312,8 @@ Format preference
 
 How the catalog composition changes under filters
 
-3. 📈 Release-Year Trend — Area Chart
+**Release-Year Trend — Area Chart**
+<img width="590" height="281" alt="{32BA6BB5-0B77-4594-A0F6-B4606FC09253}" src="https://github.com/user-attachments/assets/e3cd9382-c253-40e8-8510-00274a88f822" />
 
 X-axis: release_year
 Y-axis: title count
@@ -368,7 +334,8 @@ Why an area chart?
 
 Because the objective is to communicate trend + volume over time rather than compare isolated categories.
 
-4. ⭐ Rating Distribution — Column Chart
+**Rating Distribution — Column Chart**
+<img width="561" height="280" alt="{52009AE1-F4DE-46B9-8564-CF7044B82291}" src="https://github.com/user-attachments/assets/6377803e-5843-4c0c-8bb6-ca42ce0f74b3" />
 
 X-axis: rating
 Y-axis: title count
@@ -389,7 +356,9 @@ How does the rating distribution change by content type?
 
 How does the mix change for a selected country or year?
 
-5. 🌍 Country Distribution — Filled Map
+ **Country Distribution — Filled Map**
+ <img width="695" height="277" alt="{10EA988B-7BF5-4E32-AA93-89EA44C5D137}" src="https://github.com/user-attachments/assets/10a06f8c-c6eb-4ecb-8a93-f19cba4b3bee" />
+
 
 Geographic field: Country_new
 
@@ -408,6 +377,8 @@ Which markets have the strongest content representation?
 How does country distribution change when filtering the report?
 
 6. 🎥 Director Analysis — Donut / Metric Layer
+<img width="347" height="267" alt="{AFD28C89-812F-412A-B1C3-D8D0DEF80EBE}" src="https://github.com/user-attachments/assets/e335e573-85a3-4938-ba68-c2ad7e852807" />
+
 
 The PBIX includes a director-focused visual using the cleaned Director_new field.
 
@@ -421,7 +392,9 @@ That distinction is important in an interview because:
 
 Count of director records ≠ Count of unique directors
 
-7. 🎛️ Interactive Slicers
+ **Interactive Slicers**
+ <img width="472" height="278" alt="{599D3B0C-CA4E-4318-9452-325703D88EB0}" src="https://github.com/user-attachments/assets/8b0c7b96-102d-49c2-b333-75e181d82c99" />
+
 
 The dashboard contains three primary slicers:
 
@@ -481,35 +454,21 @@ Country distribution updates
 
 This is the difference between a dashboard and a collection of independent charts.
 
-🧠 Why Each Visualization Was Chosen
+**Why Each Visualization Was Chosen**
 
-Visualization
+Visualization                           Analytical purpose
 
-Analytical purpose
+KPI Card                               Fast executive summary
 
-KPI Card
+Donut Chart                            Show composition / share
 
-Fast executive summary
+Area Chart                             Time-based trend and volume
 
-Donut Chart
+Column Chart                           Category comparison
 
-Show composition / share
+Filled Map                             Geographic distribution
 
-Area Chart
-
-Time-based trend and volume
-
-Column Chart
-
-Category comparison
-
-Filled Map
-
-Geographic distribution
-
-Slicer
-
-User-driven filtering
+Slicer                                 User-driven filtering
 
 The visual choices are based on the question being answered, not simply on visual variety.
 
@@ -537,7 +496,7 @@ A global summary can look very different after selecting a country, year, or con
 
 These observations describe the current dashboard view and should not be interpreted as causal business conclusions about Netflix's real-world strategy.
 
-🎨 Dashboard Design & UX
+**Dashboard Design & UX**
 
 The report uses a dark entertainment-style theme with:
 
@@ -569,7 +528,7 @@ Bottom
 
 The result is a dashboard designed for fast scanning first, deeper exploration second.
 
-📐 Power BI Report Structure
+**Power BI Report Structure**
 
 The current PBIX is a single-page 1280 × 720 report containing the main dashboard experience.
 
@@ -595,38 +554,8 @@ Country slicer
 
 Netflix branding image
 
-📁 Repository Structure
 
-Netflix-PowerBI-Dashboard/
-│
-├── README.md
-├── dashboard of netflix.pbix
-├── netflix.jpg
-└── netflix_titles.csv
-
-File purpose
-
-File
-
-Purpose
-
-dashboard of netflix.pbix
-
-Power BI report
-
-netflix_titles.csv
-
-Source dataset
-
-netflix.jpg
-
-Dashboard preview
-
-README.md
-
-Project documentation
-
-▶️ How to Run the Project
+**How to Run the Project**
 
 1. Clone the repository
 
@@ -646,135 +575,8 @@ netflix_titles.csv
 
 If Power BI asks for a different file location, update the source path in Power Query.
 
-4. Refresh
 
-Use:
-
-Home → Refresh
-
-5. Explore the dashboard
-
-Try combinations of:
-
-Show Type + Release Year + Country
-
-and observe how the KPIs and visuals change.
-
-🗣️ Interview-Ready Project Explanation
-
-30-second answer
-
-"I built an interactive Netflix Content Analytics dashboard using Power BI. I started by preparing the Netflix titles dataset in Power Query, including cleaning and creating analysis-ready country and director fields. Then I used DAX-based measures for KPIs such as total shows, movies, TV shows and director-linked records. I designed a one-page interactive dashboard with KPI cards, donut charts, a release-year area chart, a rating column chart, a filled country map and slicers for show type, release year and country. The main objective was to turn raw catalog data into an interactive analytical story rather than just presenting static charts."
-
-🧑‍💼 Common Interview Questions
-
-Why did you use Power Query?
-
-Answer:
-"Power Query is the data-preparation layer. I used it to clean and structure the raw dataset and create fields that were more suitable for reporting and visualization."
-
-Why did you use DAX?
-
-Answer:
-"DAX allowed me to create reusable measures that respond to filter context, so KPIs and visual totals update automatically when users interact with the dashboard."
-
-Why use a donut chart for Movie vs TV Show?
-
-Answer:
-"Because the question is about composition. A donut chart makes the relative share of Movies and TV Shows easy to understand at a glance."
-
-Why use an area chart for release year?
-
-Answer:
-"The variable is temporal, so an area chart communicates the overall trend and volume across years more naturally than a categorical chart."
-
-Why use a filled map?
-
-Answer:
-"Country is a geographic field, so a map is an intuitive way to identify spatial patterns in content distribution."
-
-What is the difference between a report and a dashboard?
-
-Answer:
-"A Power BI report is a richer analytical experience that can contain multiple pages and extensive interaction. A dashboard is a single-page monitoring view and can bring tiles from different reports."
-
-What happens when I select a slicer?
-
-Answer:
-"The selection changes the filter context. Connected visuals recalculate their measures and update to reflect the selected subset."
-
-What is the difference between a count of directors and unique directors?
-
-Answer:
-"A count of non-blank director records counts populated records. A distinct count counts unique director names. They can produce different results, especially when one person appears on multiple titles."
-
-📌 Resume-Ready Project Description
-
-Netflix Content Analytics Dashboard | Power BI
-
-Built an interactive Power BI dashboard to analyze 8,086 titles, including 5,486 Movies and 2,600 TV Shows in the dashboard's current model view.
-
-Used Power Query / M for data preparation and analysis-ready fields, including country and director transformations.
-
-Developed DAX-based KPIs and filter-aware reporting for content mix and catalog analysis.
-
-Designed interactive donut, area, column and filled-map visualizations with slicers for Show Type, Release Year and Country.
-
-Applied data storytelling and dashboard UX principles to convert raw catalog data into an executive-friendly analytical view.
-
-🚀 Future Enhancements
-
-The current dashboard can be extended with:
-
-Genre-level analysis using listed_in
-
-Top countries by title count
-
-Top directors using DISTINCTCOUNT
-
-Movie duration analysis
-
-TV-show season analysis
-
-Titles added over time using date_added
-
-KPI percentage measures
-
-Drill-through pages
-
-Report tooltips
-
-Bookmarks and navigation
-
-Dedicated executive summary page
-
-Advanced time-intelligence measures
-
-Power BI Service publishing
-
-⚠️ Analytical Limitations
-
-This project is a catalog analytics project, not a complete Netflix business-performance model.
-
-The available dataset does not directly provide:
-
-Streaming hours
-
-Revenue
-
-Subscriber-level behavior
-
-Watch time
-
-Retention
-
-Customer satisfaction
-
-Content ROI
-
-Therefore, the dashboard should be used to understand catalog structure and descriptive patterns, rather than to make unsupported claims about profitability or customer behavior.
-
-⭐ What This Project Shows
+ **What This Project Shows**
 
 RAW DATA
    ↓
@@ -806,7 +608,7 @@ https://www.linkedin.com/in/sonam-gupta-a5a9b640/
 
 Sonam Gupta
 
-B.Sc. Computer Science
+Student of Computer Science
 Aspiring Data Analyst | Power BI | SQL | Python | Machine Learning
 
 <p align="center">
