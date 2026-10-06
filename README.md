@@ -345,7 +345,7 @@ analysis - Business storytelling - Interactive exploration
 
 1. Download the repository
 
-git clone https://github.com/YOUR_USERNAME/Netflix-PowerBI-Dashboard.git
+git clone (https://github.com/sonamgupta21062003-cmyk/Netflix-PowerBI-Dashboard.git)
 
 2. Open the PBIX file
 
