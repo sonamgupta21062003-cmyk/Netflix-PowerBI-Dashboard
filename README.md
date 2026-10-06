@@ -1,7 +1,4 @@
-*****Netflix Content Analytics Dashboard — Power BI*****
-
-
-
+# Netflix Content Analytics Dashboard — Power BI
 <p align="center">
   <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
   <img src="https://img.shields.io/badge/Power%20Query-M%20Language-00A4EF?style=for-the-badge">
@@ -17,7 +14,7 @@
   <b>Interactive Business Intelligence dashboard built with Power BI to analyze Netflix content across type, time, ratings, countries, and director coverage.</b>
 </p>
 
-****Project Objective****
+## Project Objective
 
 The goal of this project is to turn a raw Netflix titles dataset into an interactive analytical dashboard that helps users quickly understand the structure and evolution of the Netflix catalog.
 
@@ -37,7 +34,7 @@ How do the metrics change when the user filters by Show Type, Release Year, or C
 
 This project focuses on both technical Power BI skills and business-oriented data storytelling.
 
-*****Dashboard Snapshot*****
+## Dashboard Snapshot
 
 The current dashboard view displays:
 
@@ -107,7 +104,7 @@ Netflix Titles Dataset
         ▼
  Business Insights
 
- ****Dataset Understanding****
+ ## Dataset Understanding
 
 The repository contains the Netflix titles dataset with fields including:
 
@@ -139,7 +136,7 @@ description                           Title description
 
 The PBIX model also uses prepared fields such as Country_new and Director_new for reporting.
 
-***Data Preparation & Power Query / M Understanding***
+## Data Preparation & Power Query / M Understanding
 
 Power Query acts as the data-preparation layer between the raw CSV and the analytical report.
 
@@ -189,7 +186,7 @@ Load
 
 Power Query is therefore responsible for preparing the data, while Power BI's visual and DAX layers are responsible for analysis and presentation.
 
-**DAX & Measurement Layer**
+## DAX & Measurement Layer
 
 DAX provides the calculation layer used to turn the dataset into report-level KPIs and analytical metrics.
 
@@ -237,7 +234,7 @@ This is what makes the report dynamic rather than static.
 
 ***Dashboard Visualizations***
 
-*****KPI Cards — Executive Overview*****
+## KPI Cards — Executive Overview
 
 The top section provides immediate headline metrics:
 <img width="612" height="130" alt="{B9848B17-17C5-473E-866F-35DDFC1B4D67}" src="https://github.com/user-attachments/assets/70bcc192-405e-4f48-8230-f5955029a521" />
@@ -289,7 +286,7 @@ Format preference
 
 How the catalog composition changes under filters
 
-*****Release-Year Trend — Area Chart*****
+## Release-Year Trend — Area Chart
 <img width="590" height="281" alt="{32BA6BB5-0B77-4594-A0F6-B4606FC09253}" src="https://github.com/user-attachments/assets/e3cd9382-c253-40e8-8510-00274a88f822" />
 
 X-axis: release_year
@@ -311,7 +308,7 @@ Why an area chart?
 
 Because the objective is to communicate trend + volume over time rather than compare isolated categories.
 
-*****Rating Distribution — Column Chart*****
+## Rating Distribution — Column Chart
 <img width="561" height="280" alt="{52009AE1-F4DE-46B9-8564-CF7044B82291}" src="https://github.com/user-attachments/assets/6377803e-5843-4c0c-8bb6-ca42ce0f74b3" />
 
 X-axis: rating
@@ -333,7 +330,7 @@ How does the rating distribution change by content type?
 
 How does the mix change for a selected country or year?
 
- *****Country Distribution — Filled Map*****
+## Country Distribution — Filled Map
  <img width="695" height="277" alt="{10EA988B-7BF5-4E32-AA93-89EA44C5D137}" src="https://github.com/user-attachments/assets/10a06f8c-c6eb-4ecb-8a93-f19cba4b3bee" />
 
 
@@ -353,7 +350,7 @@ Which markets have the strongest content representation?
 
 How does country distribution change when filtering the report?
 
-****Director Analysis — Donut / Metric Layer*****
+## Director Analysis — Donut / Metric Layer
 <img width="347" height="267" alt="{AFD28C89-812F-412A-B1C3-D8D0DEF80EBE}" src="https://github.com/user-attachments/assets/e335e573-85a3-4938-ba68-c2ad7e852807" />
 
 
@@ -369,7 +366,7 @@ That distinction is important in an interview because:
 
 Count of director records ≠ Count of unique directors
 
- **Interactive Slicers**
+ ## Interactive Slicers
  <img width="472" height="278" alt="{599D3B0C-CA4E-4318-9452-325703D88EB0}" src="https://github.com/user-attachments/assets/8b0c7b96-102d-49c2-b333-75e181d82c99" />
 
 
@@ -553,7 +550,7 @@ netflix_titles.csv
 If Power BI asks for a different file location, update the source path in Power Query.
 
 
- **What This Project Shows**
+ ## What This Project Shows
 
 RAW DATA
    ↓
@@ -581,7 +578,7 @@ https://github.com/sonamgupta21062003-cmyk/Netflix-PowerBI-Dashboard
 LinkedIn:
 https://www.linkedin.com/in/sonam-gupta-a5a9b640/
 
-👩‍💻 Author
+## 👩‍💻 Author
 
 Sonam Gupta
 
